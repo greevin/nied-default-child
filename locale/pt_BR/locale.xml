@@ -13,5 +13,5 @@
 
 <locale name="pt_BR" full_name="Português (Brasil)">
 	<message key="plugins.themes.nied-default-child.name">Tema NIED OJS3</message>
-	<message key="plugins.themes.nied-default-child.description">Tema filho do tema padrão do OJS 3 para o site da revista do NIED.</message>
+	<message key="plugins.themes.nied-default-child.description">Tema filho do OJS3 para o site da revista do NIED (baseado no tema padrão).</message>
 </locale>

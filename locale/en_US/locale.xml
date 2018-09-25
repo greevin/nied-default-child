@@ -13,5 +13,5 @@
 
 <locale name="en_US" full_name="U.S. English">
 	<message key="plugins.themes.nied-default-child.name">OJS3 NIED Theme</message>
-	<message key="plugins.themes.nied-default-child.description">OJS's child theme based on default theme to NIED Magazine.</message>
+	<message key="plugins.themes.nied-default-child.description">OJS3's child theme for NIED magazine (based on the default theme).</message>
 </locale>
