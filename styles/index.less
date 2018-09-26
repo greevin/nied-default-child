@@ -1,3 +1,70 @@
 @import "remove-borders.less";
 @import "header.less";
 @import "nied.less";
+
+// Pagina Inicial
+
+// muda a cor do fundo das páginas
+@bg: #f6f8fa;
+
+.background-box-shadow() {
+    background: #fff;
+    box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
+}
+
+.pkp_page_index .cmp_announcements {
+	.background-box-shadow();
+}
+
+// Pagina Inicial - Secao Noticias
+.cmp_announcements {
+    margin-top: 20px;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.obj_announcement_summary .summary {
+    word-break: break-word;
+}
+
+// Pagina Inicial - Secao Edicao Atual
+.current_issue {
+    margin: 30px -5px;
+    padding: 1px 10px 20px 10px;
+    background: white;
+    box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
+}
+
+.obj_issue_toc .sections .section {
+    border-top: 1px solid grey;
+    padding-bottom: 0px;
+}
+
+// Media Queries
+@media (min-width: 480px) {
+  .current_issue {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+@media (min-width: 768px) {
+    .obj_issue_toc .section {
+        margin: 30px -30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .current_issue {
+      margin: 30px -30px;
+      padding: 1px 30px 20px 30px;
+      background: white;
+      box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
+    }
+
+    .cmp_announcements {
+      margin-top: 30px;
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+}
