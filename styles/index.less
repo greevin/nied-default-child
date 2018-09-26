@@ -1,16 +1,12 @@
 @import "remove-borders.less";
 @import "header.less";
 @import "archive.less";
+@import "mixins.less";
 
 // Pagina Inicial
 
 // muda a cor do fundo das páginas
 @bg: #f6f8fa;
-
-.background-box-shadow() {
-    background: #fff;
-    box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
-}
 
 .pkp_page_index .cmp_announcements {
 	.background-box-shadow();
@@ -31,8 +27,7 @@
 .current_issue {
     margin: 30px -5px;
     padding: 1px 10px 20px 10px;
-    background: white;
-    box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
+    .background-box-shadow();
 }
 
 .obj_issue_toc .sections .section {
@@ -75,8 +70,7 @@
     .current_issue {
       margin: 30px -30px;
       padding: 1px 30px 20px 30px;
-      background: white;
-      box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
+      .background-box-shadow();
     }
 
     .cmp_announcements {
