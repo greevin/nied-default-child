@@ -19,6 +19,7 @@ body {
 
 .pkp_page_index .cmp_announcements {
     .background-box-shadow();
+    border-top: 10px solid #1999f2;
 }
 
 // Retira o padding dos paineis
@@ -52,8 +53,16 @@ body {
 // Pagina Inicial - Conteudo Adicional
 .pkp_page_index .additional_content {
     .background-box-shadow();
-    border-left: 10px solid #007ab2;
+    border-top: 10px solid #007ab2;
     padding-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.pkp_page_index .editorial_team {
+    .background-box-shadow();
+    border-top: 10px solid #890853;
+    padding: 10px 30px;
     margin-left: 0;
     margin-right: 0;
 }
@@ -71,12 +80,13 @@ body {
 
 // Pagina Inicial - Secao Edicao Atual
 .page_index_journal .current_issue {
+    border-top: 10px solid #501384;
     margin-left: 0;
     margin-right: 0;
     .background-box-shadow();
 }
 
-.obj_issue_toc .sections .section {
+.obj_issue_toc .sections .section, .more article.obj_announcement_summary {
     border-top: 1px solid @grey-color;
     padding-bottom: 0px;
 }

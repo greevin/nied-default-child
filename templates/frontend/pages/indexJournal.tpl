@@ -47,14 +47,19 @@
 				</div>
 			{/if}
 		</div>
+
 		<div class="col mr-3">
-			{*	style="float: left;width: 33.3%;margin: 10px 10px;"*}
 			{* Additional Homepage Content *}
 			{if $journalDescription}
-				<div class="additional_content" >
+				<div class="additional_content" style="margin-bottom: 10px;">
 					{$journalDescription}
 				</div>
 			{/if}
+
+			<div class="editorial_team" style="margin-bottom: 10px;">
+				<h2>{translate key="manager.setup.editorialTeam"}</h2>
+				{$currentContext->getLocalizedSetting('editorialTeam')}
+			</div>
 
 			{* Additional Homepage Content *}
 			{if $additionalHomeContent}
@@ -62,13 +67,8 @@
 					{$additionalHomeContent}
 				</div>
 			{/if}
-
-			{if $journalDescription}
-				<div class="additional_content" style="margin-top: 20px">
-					{$journalDescription}
-				</div>
-			{/if}
 		</div>
+
 		<div class="col mr-3">
 			{* Announcements *}
 			{if $numAnnouncementsHomepage && $announcements|@count}
@@ -82,18 +82,9 @@
 					{/if}
 					{if $smarty.foreach.announcements.iteration == 1}
 					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
-					<div class="more">
+					<div class="more" style="width: 101%;">
 						{else}
-						<article class="obj_announcement_summary">
-							<h4>
-								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
-									{$announcement->getLocalizedTitle()|escape}
-								</a>
-							</h4>
-							<div class="date">
-								{$announcement->getDatePosted()}
-							</div>
-						</article>
+							{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
 						{/if}
 						{/foreach}
 					</div><!-- .more -->
