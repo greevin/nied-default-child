@@ -28,58 +28,81 @@
 		</div>
 	{/if}
 
-	{* Additional Homepage Content *}
-	{if $additionalHomeContent}
-		<div class="additional_content">
-			{$additionalHomeContent}
-		</div>
-	{/if}
+	<div class="row">
 
-	{* Announcements *}
-	{if $numAnnouncementsHomepage && $announcements|@count}
-		<div class="cmp_announcements highlight_first">
-			<h2>
-				{translate key="announcement.announcements"}
-			</h2>
-			{foreach name=announcements from=$announcements item=announcement}
-				{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
-					{php}break;{/php}
-				{/if}
-				{if $smarty.foreach.announcements.iteration == 1}
+		<div class="col mr-3">
+			{* Latest issue *}
+			{if $issue}
+				<div class="current_issue" style="margin-top: 0px;">
+					<h2>
+						{translate key="journal.currentIssue"}
+					</h2>
+					<div class="current_issue_title">
+						{$issue->getIssueIdentification()|strip_unsafe_html}
+					</div>
+					{include file="frontend/objects/issue_toc.tpl"}
+					<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+						{translate key="journal.viewAllIssues"}
+					</a>
+				</div>
+			{/if}
+		</div>
+		<div class="col mr-3">
+			{*	style="float: left;width: 33.3%;margin: 10px 10px;"*}
+			{* Additional Homepage Content *}
+			{if $journalDescription}
+				<div class="additional_content" >
+					{$journalDescription}
+				</div>
+			{/if}
+
+			{* Additional Homepage Content *}
+			{if $additionalHomeContent}
+				<div class="additional_content">
+					{$additionalHomeContent}
+				</div>
+			{/if}
+
+			{if $journalDescription}
+				<div class="additional_content" style="margin-top: 20px">
+					{$journalDescription}
+				</div>
+			{/if}
+		</div>
+		<div class="col mr-3">
+			{* Announcements *}
+			{if $numAnnouncementsHomepage && $announcements|@count}
+				<div class="cmp_announcements highlight_first" style="margin-top: 0px;">
+					<h2>
+						{translate key="announcement.announcements"}
+					</h2>
+					{foreach name=announcements from=$announcements item=announcement}
+					{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
+						{php}break;{/php}
+					{/if}
+					{if $smarty.foreach.announcements.iteration == 1}
 					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
 					<div class="more">
-				{else}
-					<article class="obj_announcement_summary">
-						<h4>
-							<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
-								{$announcement->getLocalizedTitle()|escape}
-							</a>
-						</h4>
-						<div class="date">
-							{$announcement->getDatePosted()}
-						</div>
-					</article>
-				{/if}
-			{/foreach}
-			</div><!-- .more -->
+						{else}
+						<article class="obj_announcement_summary">
+							<h4>
+								<a href="{url router=$smarty.const.ROUTE_PAGE page="announcement" op="view" path=$announcement->getId()}">
+									{$announcement->getLocalizedTitle()|escape}
+								</a>
+							</h4>
+							<div class="date">
+								{$announcement->getDatePosted()}
+							</div>
+						</article>
+						{/if}
+						{/foreach}
+					</div><!-- .more -->
+				</div>
+			{/if}
 		</div>
-	{/if}
+	</div>
 
-	{* Latest issue *}
-	{if $issue}
-		<div class="current_issue">
-			<h2>
-				{translate key="journal.currentIssue"}
-			</h2>
-			<div class="current_issue_title">
-				{$issue->getIssueIdentification()|strip_unsafe_html}
-			</div>
-			{include file="frontend/objects/issue_toc.tpl"}
-			<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}" class="read_more">
-				{translate key="journal.viewAllIssues"}
-			</a>
-		</div>
-	{/if}
+
 
 </div><!-- .page -->
 

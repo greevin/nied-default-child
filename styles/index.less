@@ -1,6 +1,8 @@
 @import "about.less";
 @import "announcement.less";
 @import "archive.less";
+@import "body.less";
+@import "bootstrap-grid.less";
 @import "header.less";
 @import "mixins.less";
 @import "remove-borders.less";
@@ -101,6 +103,13 @@ body {
     justify-content: flex-end;
 }
 
+.col {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 // Media Queries
 @media (min-width: 480px) {
   .current_issue {
@@ -123,8 +132,8 @@ body {
     }
 
     .cmp_announcements {
-      margin-top: 30px;
-      margin-left: -30px;
-      margin-right: -30px;
+      //margin-top: 30px;
+      //margin-left: -30px;
+      //margin-right: -30px;
     }
 }
