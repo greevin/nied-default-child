@@ -28,6 +28,8 @@
 		</div>
 	{/if}
 
+    {include file="frontend/components/carousel.tpl"}
+
 	<div class="row">
 
 		<div class="col mr-3">
@@ -73,9 +75,7 @@
 			{* Announcements *}
 			{if $numAnnouncementsHomepage && $announcements|@count}
 				<div class="cmp_announcements highlight_first" style="margin-top: 0px;">
-					<h2>
-						{translate key="announcement.announcements"}
-					</h2>
+					<h2>{translate key="announcement.announcements"}</h2>
 					{foreach name=announcements from=$announcements item=announcement}
 					{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
 						{php}break;{/php}
