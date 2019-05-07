@@ -28,11 +28,12 @@
 		</div>
 	{/if}
 
+    {* Announcements Carousel *}
     {include file="frontend/components/carousel.tpl"}
 
 	<div class="row">
 
-		<div class="col mr-3">
+		<div class="col-8 mr-3">
 			{* Latest issue *}
 			{if $issue}
 				<div class="current_issue" style="margin-top: 0px;">
@@ -62,38 +63,8 @@
 				<h2>{translate key="manager.setup.editorialTeam"}</h2>
 				{$currentContext->getLocalizedSetting('editorialTeam')}
 			</div>
-
-			{* Additional Homepage Content *}
-			{if $additionalHomeContent}
-				<div class="additional_content">
-					{$additionalHomeContent}
-				</div>
-			{/if}
-		</div>
-
-		<div class="col mr-3">
-			{* Announcements *}
-			{if $numAnnouncementsHomepage && $announcements|@count}
-				<div class="cmp_announcements highlight_first" style="margin-top: 0px;">
-					<h2>{translate key="announcement.announcements"}</h2>
-					{foreach name=announcements from=$announcements item=announcement}
-					{if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
-						{php}break;{/php}
-					{/if}
-					{if $smarty.foreach.announcements.iteration == 1}
-					{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
-					<div class="more" style="width: 101%;">
-						{else}
-							{include file="frontend/objects/announcement_summary.tpl" heading="h3"}
-						{/if}
-						{/foreach}
-					</div><!-- .more -->
-				</div>
-			{/if}
 		</div>
 	</div>
-
-
 
 </div><!-- .page -->
 
