@@ -33,13 +33,11 @@
 
 	<div class="row">
 
-		<div class="col-8 mr-3">
+		<div class="col-12 col-md-8 mb-4">
 			{* Latest issue *}
 			{if $issue}
 				<div class="current_issue" style="margin-top: 0px;">
-					<h2>
-						{translate key="journal.currentIssue"}
-					</h2>
+					<h2>{translate key="journal.currentIssue"}</h2>
 					<div class="current_issue_title">
 						{$issue->getIssueIdentification()|strip_unsafe_html}
 					</div>
@@ -51,15 +49,15 @@
 			{/if}
 		</div>
 
-		<div class="col mr-3">
+		<div class="col-12 col-md-4">
 			{* Additional Homepage Content *}
 			{if $journalDescription}
-				<div class="additional_content" style="margin-bottom: 10px;">
+				<div class="additional_content mb-4">
 					{$journalDescription}
 				</div>
 			{/if}
 
-			<div class="editorial_team" style="margin-bottom: 10px;">
+			<div class="editorial_team mt-4 mb-4">
 				<h2>{translate key="manager.setup.editorialTeam"}</h2>
 				{$currentContext->getLocalizedSetting('editorialTeam')}
 			</div>
