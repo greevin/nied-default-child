@@ -8,7 +8,7 @@
         {if $numAnnouncementsHomepage && $announcements|@count}
             {foreach name=announcements from=$announcements item=announcement}
                 <div class="carousel-item" style="padding: 150px;">
-                    <div class="carousel-caption d-none d-md-block cmp_announcements">
+                    <div class="carousel-caption d-md-block cmp_announcements">
                         {include file="frontend/objects/announcement_summary.tpl" heading="h3"}
                     </div>
                 </div>
