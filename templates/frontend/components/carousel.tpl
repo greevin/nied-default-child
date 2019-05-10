@@ -4,7 +4,7 @@
         <li data-target="#carouselAnnouncements" data-slide-to="1" class=""></li>
         <li data-target="#carouselAnnouncements" data-slide-to="2" class=""></li>
     </ol>
-    <div class="carousel-inner" style="background: lightgrey;">
+    <div class="carousel-inner" style="background: lightgrey;border-radius: 0.25rem;">
         {if $numAnnouncementsHomepage && $announcements|@count}
             {foreach name=announcements from=$announcements item=announcement}
                 <div class="carousel-item" style="padding: 150px;">
