@@ -24,8 +24,9 @@ class NiedDefaultChildThemePlugin extends ThemePlugin {
 	public function init() {
 		$this->setParent('defaultthemeplugin');
 		$this->modifyStyle('stylesheet', array('addLess' => array('styles/index.less')));
-        $this->addStyle('bootstrap3', 'bootstrap/css/carousel.css');
-        $this->addScript('bootstrap3', 'bootstrap/js/bootstrap.min.js');
+        $this->addStyle('bootstrapcard', 'bootstrap/css/card.css');
+        $this->addStyle('bootstrapcarousel', 'bootstrap/css/carousel.css');
+        $this->addScript('bootstrapjs', 'bootstrap/js/bootstrap.min.js');
 	}
 
 	/**
