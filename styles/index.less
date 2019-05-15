@@ -3,6 +3,7 @@
 @import "archive.less";
 @import "body.less";
 @import "bootstrap-grid.less";
+@import "breadcrumbs.less";
 @import "header.less";
 @import "mixins.less";
 @import "remove-borders.less";
@@ -15,6 +16,11 @@
 
 body {
     padding-bottom: 0px;
+}
+
+.row:before, .row:after {
+  content: " ";
+  display: inline-block !important;
 }
 
 // Retira o padding dos paineis
