@@ -1,5 +1,5 @@
 {**
- * templates/frontend/components/breadcrumbs.tpl
+ * plugins/themes/nied-default-child/templates/frontend/components/breadcrumbs.tpl
  *
  * Copyright (c) 2014-2018 Simon Fraser University
  * Copyright (c) 2003-2018 John Willinsky
@@ -14,16 +14,18 @@
  * @uses $currentTitleKey string Translation key for title of current page.
  *}
 
-<nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
-	<ol>
+<nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}" style="border-bottom: 1px solid #dedede;width:100%;">
+	<ol style="margin-bottom: 10px;">
 		<li>
+            <span class="separator-sign">{translate key="breadcrumber.location"}</span>
 			<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}">
 				{translate key="common.homepageNavigationLabel"}
 			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
+{*			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>*}
+            <span class="separator-sign"> &gt; </span>
 		</li>
 		<li class="current">
-			<h1>
+			<h1 style="font-weight: bold;">
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}

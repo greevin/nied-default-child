@@ -18,24 +18,25 @@
 <nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
 	<ol>
 		<li>
+            <span class="separator-sign">{translate key="breadcrumber.location"}</span>
 			<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}">
 				{translate key="common.homepageNavigationLabel"}
 			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
+            <span style="color: rgba(0,0,0,0.54);"> &gt; </span>
 		</li>
 		<li>
 			<a href="{url router=$smarty.const.ROUTE_PAGE page="issue" op="archive"}">
 				{translate key="navigation.archives"}
 			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
+            <span class="separator-sign"> &gt; </span>
 		</li>
 		<li>
 			<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
 				{$issue->getIssueIdentification()}
 			</a>
-			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
+            <span class="separator-sign"> &gt; </span>
 		</li>
-		<li class="current">
+		<li class="current" style="font-weight: bold;">
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}

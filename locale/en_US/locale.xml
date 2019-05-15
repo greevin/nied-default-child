@@ -15,4 +15,5 @@
 	<message key="plugins.themes.nied-default-child.name">OJS3 NIED Theme</message>
 	<message key="plugins.themes.nied-default-child.description">OJS3's child theme for NIED magazine (based on the default theme).</message>
     <message key="manager.setup.editorialTeam">Editorial Team</message>
+    <message key="breadcrumber.location">You are here: </message>
 </locale>
