@@ -13,6 +13,8 @@
 // muda a cor do fundo das páginas
 @bg: #f6f8fa;
 @grey-color: #D8D8D8;
+@img-width: 100px;
+@img-height: 100px;
 
 body {
     padding-bottom: 0px;
@@ -61,6 +63,7 @@ body {
     margin-right: 0;
 }
 
+// Pagina Inicial - Equipe Editorial
 .pkp_page_index .editorial_team {
     .background-box-shadow();
     padding: 10px 30px;
@@ -69,8 +72,7 @@ body {
 }
 
 .pkp_page_index .editorial_team table img {
-    width: 100px;
-    height: 100px;
+    .image-size(@img-width, @img-height);
     object-fit: cover;
 }
 

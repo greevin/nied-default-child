@@ -1,5 +1,11 @@
 @import "mixins.less";
 
+@border-color: #2286c3;
+@section-bg-color: #bbdefb;
+@img-width: 150px;
+@img-height: 150px;
+
+
 // Sobre a Revista
 #pkp_content_main .page.page_about>div:nth-child(n + 3) {
   .background-box-shadow();
@@ -29,8 +35,7 @@
 }
 
 .page_editorial_team img {
-  width: 150px;
-  height: 150px;
+  .image-size(@img-width, @img-height);
   object-fit: cover;
 }
 
@@ -44,13 +49,10 @@
   padding: 30px;
 }
 
-.cmp_notification_about {
-  display: block;
-  width: 100%;
-  padding: 20px 30px;
-  margin-bottom: 0;
-  background: #bbdefb;
-  border-top: 5px solid #2286c3;
+.about_section_title {
+  .section-title();
+  background: @section-bg-color;
+  border-top: 5px solid @border-color;
 }
 
 .page_privacy p {

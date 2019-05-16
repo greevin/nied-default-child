@@ -15,7 +15,7 @@
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.editorialTeam"}
 	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="masthead" sectionTitleKey="about.editorialTeam"}
 
-    <h1 class="cmp_notification_about" style="box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);margin-top: 0px;">{translate key="manager.setup.editorialTeam"}</h1>
+    <h1 class="about_section_title" style="box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);margin-top: 0px;">{translate key="manager.setup.editorialTeam"}</h1>
     {$currentContext->getLocalizedSetting('editorialTeam')}
 </div><!-- .page -->
 

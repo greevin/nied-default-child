@@ -14,7 +14,7 @@
 <div class="page page_privacy">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="manager.setup.privacyStatement"}
 
-    <h1 class="cmp_notification_about" style="box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);margin-top: 0px;">{translate key="manager.setup.privacyStatement"}</h1>
+    <h1 class="about_section_title" style="box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);margin-top: 0px;">{translate key="manager.setup.privacyStatement"}</h1>
 	{$privacyStatement}
 </div><!-- .page -->
 

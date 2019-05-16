@@ -24,7 +24,7 @@
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="about.contact"}
 	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="context" anchor="contact" sectionTitleKey="about.contact"}
 
-    <h1 class="cmp_notification_about" style="box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);margin-top: 0px;">{translate key="manager.subscriptions.form.userContact"}</h1>
+    <h1 class="about_section_title" style="box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);margin-top: 0px;">{translate key="manager.subscriptions.form.userContact"}</h1>
 	{* Contact section *}
 	<div class="contact_section">
 
