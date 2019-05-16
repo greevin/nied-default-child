@@ -1,0 +1,37 @@
+@import "mixins.less";
+
+@border-color: #255d00;
+@section-bg-color: #1de9b6;
+
+
+.form_title {
+  .section-title();
+  background: @section-bg-color;
+  border-top: 5px solid @border-color;
+  box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
+}
+
+.page_lost_password_form {
+  margin-bottom: 30px;
+  background: #fff;
+  box-shadow: 0 0.15em 0.35em 0 rgba(0, 0, 0, 0.133);
+  padding: 30px;
+  max-width: 100%;
+}
+
+.page_lost_password .lost_password {
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.page_lost_password .buttons button {
+  float: left;
+}
+
+.cmp_form fieldset .buttons a {
+  float: right;
+  clear: right;
+  padding-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}

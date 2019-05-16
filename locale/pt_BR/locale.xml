@@ -17,4 +17,6 @@
     <message key="manager.setup.editorialTeam">Equipe Editorial</message>
     <message key="breadcrumber.location">Você está aqui: </message>
     <message key="manager.subscriptions.form.userContact">Contato</message>
+    <message key="manager.people.enrollment">Cadastrar</message>
+    <message key="manager.login">Acesso</message>
 </locale>
