@@ -14,8 +14,8 @@
  * @uses $currentTitleKey string Translation key for title of current page.
  *}
 
-<nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}" style="border-bottom: 1px solid #dedede;width:100%;">
-	<ol style="margin-bottom: 10px;">
+<nav class="cmp_breadcrumbs" role="navigation" aria-label="{translate key="navigation.breadcrumbLabel"}">
+	<ol>
 		<li>
             <span class="separator-sign">{translate key="breadcrumber.location"}</span>
 			<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}">
