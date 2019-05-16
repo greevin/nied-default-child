@@ -1,27 +1,61 @@
 @import "mixins.less";
 
 // Sobre a Revista
-#pkp_content_main .page.page_about > div:nth-child(n + 3) {
-    .background-box-shadow();
-    .remove-section-space();
-    .padding-section();
+#pkp_content_main .page.page_about>div:nth-child(n + 3) {
+  .background-box-shadow();
+  .remove-section-space();
+  .padding-section();
+}
+
+#focusAndScope h3 {
+  font-size: 1.5em;
 }
 
 // Submissões
-.page_submissions > div:nth-child(n + 3) {
-    .background-box-shadow();
-    .remove-section-space();
-    .padding-section();
+.submission_section {
+  .background-box-shadow();
+  .remove-section-space();
+  .padding-section();
 }
 
 // Equipe Editorial
 .page_editorial_team #group {
-    .background-box-shadow();
-    .padding-section();
+  .background-box-shadow();
+  .padding-section();
+}
+
+.page_editorial_team table td:first-child {
+  width: 15%;
+}
+
+.page_editorial_team img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.page_editorial_team table th, .page_editorial_team #group h4 {
+  font-size: 1rem;
 }
 
 // Contato
 .page_contact .contact_section {
-    .background-box-shadow();
-    padding: 30px;
+  .background-box-shadow();
+  padding: 30px;
+}
+
+.cmp_notification_about {
+  display: block;
+  width: 100%;
+  padding: 20px 30px;
+  margin-bottom: 0;
+  background: #bbdefb;
+  border-top: 5px solid #2286c3;
+}
+
+.page_privacy p {
+  .background-box-shadow();
+  .remove-section-space();
+  padding: 30px;
+  margin-top: 0px;
 }

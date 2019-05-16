@@ -16,4 +16,5 @@
 	<message key="plugins.themes.nied-default-child.description">Tema filho do OJS3 para o site da revista do NIED (baseado no tema padrão).</message>
     <message key="manager.setup.editorialTeam">Equipe Editorial</message>
     <message key="breadcrumber.location">Você está aqui: </message>
+    <message key="manager.subscriptions.form.userContact">Contato</message>
 </locale>

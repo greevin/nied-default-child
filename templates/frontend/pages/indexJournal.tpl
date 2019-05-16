@@ -57,8 +57,8 @@
 				</div>
 			{/if}
 
-			<div class="editorial_team mt-4 mb-4" style="border-radius: 0.25rem;">
-				<h2>{translate key="manager.setup.editorialTeam"}</h2>
+            <h2 class="cmp_notification_about">{translate key="manager.setup.editorialTeam"}</h2>
+			<div class="editorial_team mb-4">
 				{$currentContext->getLocalizedSetting('editorialTeam')}
 			</div>
 		</div>
