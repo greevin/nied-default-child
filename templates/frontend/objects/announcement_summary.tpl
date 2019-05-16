@@ -23,7 +23,7 @@
 	<div class="date" style="padding: 0 1.25rem;">
 		{$announcement->getDatePosted()|date_format:$dateFormatShort}
 	</div>
-	<div class="summary" style="padding: 0 1.25rem 1rem;">
+	<div class="summary" style="padding: .75rem 1.25rem 1.25rem;margin-top: 0;">
 		{$announcement->getLocalizedDescriptionShort()|strip_unsafe_html}
 	</div>
     <div class="card-footer">
