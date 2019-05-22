@@ -30,7 +30,7 @@
             <span class="separator-sign"> &gt; </span>
 		</li>
 		<li class="current">
-			<h1 style="font-weight: bold;">
+			<h1>
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}

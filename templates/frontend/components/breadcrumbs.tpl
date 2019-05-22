@@ -21,11 +21,10 @@
 			<a href="{url page="index" router=$smarty.const.ROUTE_PAGE}">
 				{translate key="common.homepageNavigationLabel"}
 			</a>
-{*			<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>*}
             <span class="separator-sign"> &gt; </span>
 		</li>
 		<li class="current">
-			<h1 style="font-weight: bold;">
+			<h1>
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}

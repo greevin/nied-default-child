@@ -36,7 +36,7 @@
 			</a>
             <span class="separator-sign"> &gt; </span>
 		</li>
-		<li class="current" style="font-weight: bold;">
+		<li class="current">
 				{if $currentTitleKey}
 					{translate key=$currentTitleKey}
 				{else}
