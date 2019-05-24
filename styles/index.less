@@ -9,6 +9,9 @@
 @import "mixins.less";
 @import "remove-borders.less";
 
+@lastest-issue-title-border-color: #501384;
+@lastest-issue-title-bg-color: #cab8da;
+
 // Pagina Inicial
 
 // muda a cor do fundo das páginas
@@ -58,7 +61,7 @@ body {
 // Pagina Inicial - Conteudo Adicional
 .pkp_page_index .additional_content {
     .background-box-shadow();
-    border-top: 10px solid #007ab2;
+    border-top: 5px solid #007ab2;
     padding-bottom: 30px;
     margin-left: 0;
     margin-right: 0;
@@ -77,11 +80,14 @@ body {
     object-fit: cover;
 }
 
+.pkp_page_index .editorial_team table th {
+  font-size: 1.17em;
+}
 
 // Pagina Inicial - Secao Noticias
 .page_index_journal .cmp_announcements {
     .background-box-shadow();
-    border-top: 10px solid #1999f2;
+    border-top: 5px solid #26a69a;
     border-radius: 0.25rem;
 }
 
@@ -91,7 +97,6 @@ body {
 
 // Pagina Inicial - Secao Edicao Atual
 .page_index_journal .current_issue {
-    border-top: 10px solid #501384;
     margin-left: 0;
     margin-right: 0;
     .background-box-shadow();
@@ -105,6 +110,12 @@ body {
 .page_index_journal .current_issue .obj_issue_toc .sections .section:last-child {
     border-bottom: 1px solid @grey-color;
     padding-bottom: 30px;
+}
+
+.latest_issue_section_title {
+  .section-title();
+  background: @lastest-issue-title-bg-color;
+  border-top: 5px solid @lastest-issue-title-border-color;
 }
 
 // Botao "Ver Todas as Edicoes"
