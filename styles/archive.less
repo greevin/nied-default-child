@@ -1,5 +1,14 @@
 @import "mixins.less";
 
+@border-color: #2286c3;
+@section-bg-color: #bbdefb;
+
+.archive_section_title {
+  .section-title();
+  background: @section-bg-color;
+  border-top: 5px solid @border-color;
+}
+
 // Edicoes Anteriores
 .page_issue_archive .issues_archive>li {
   .background-box-shadow();
