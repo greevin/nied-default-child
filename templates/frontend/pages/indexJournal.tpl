@@ -18,26 +18,26 @@
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$currentJournal->getLocalizedName()}
 
-<div class="page_index_journal">
+<div class="page_index_journal mt-4">
 
 	{call_hook name="Templates::Index::journal"}
 
 	{if $homepageImage}
-		<div class="homepage_image">
+		<div class="homepage_image mb-3 mt-3" style="margin: 0;">
 			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}" alt="{$homepageImageAltText|escape}">
 		</div>
 	{/if}
 
     {* Announcements Carousel *}
-    {include file="frontend/components/carousel.tpl"}
+{*    {include file="frontend/components/carousel.tpl"}*}
 
 	<div class="row">
 
-		<div class="col-12 col-md-8 mb-4">
+		<div class="col-12 col-md-4 mb-4">
 			{* Latest issue *}
 			{if $issue}
-				<div class="current_issue" style="margin-top: 0px;border-radius: 0.25rem;">
-					<h2>{translate key="journal.currentIssue"}</h2>
+                <h2 style="font-size: 1.5em;display: block;width: 100%;padding: 20px 30px;margin-bottom: 0;margin-top: 0;box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.133);background: #bbdefb; border-top: 5px solid #2286c3;">{translate key="journal.currentIssue"}</h2>
+				<div class="current_issue" style="margin-top: 0px;border-radius: 0;border-top: 0;">
 					<div class="current_issue_title">
 						{$issue->getIssueIdentification()|strip_unsafe_html}
 					</div>
@@ -52,7 +52,7 @@
 		<div class="col-12 col-md-4">
 			{* Additional Homepage Content *}
 			{if $journalDescription}
-				<div class="additional_content mb-4" style="border-radius: 0.25rem;">
+				<div class="additional_content mb-4" style="border-top: 5px solid #007ab2;">
 					{$journalDescription}
 				</div>
 			{/if}
@@ -62,6 +62,27 @@
 				{$currentContext->getLocalizedSetting('editorialTeam')}
 			</div>
 		</div>
+
+        <div class="col-12 col-md-4">
+            {* Announcements *}
+            {if $numAnnouncementsHomepage && $announcements|@count}
+                <h2 style="font-size: 1.5em;display: block;width: 100%;padding: 20px 30px;margin-bottom: 0;margin-top: 0;box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.133);background: #bbdefb; border-top: 5px solid #2286c3;">{translate key="announcement.announcements"}</h2>
+                <div class="cmp_announcements highlight_first" style="margin: 0px; border-radius: 0;border-top: 0;">
+                    {foreach name=announcements from=$announcements item=announcement}
+                    {if $smarty.foreach.announcements.iteration > $numAnnouncementsHomepage}
+                        {php}break;{/php}
+                    {/if}
+                    {if $smarty.foreach.announcements.iteration == 1}
+                    {include file="frontend/objects/announcement_summary.tpl" heading="h3"}
+                    <div class="more" style="width: 100%">
+                        {else}
+                        {include file="frontend/objects/announcement_summary.tpl" heading="h3"}
+                        {/if}
+                        {/foreach}
+                    </div><!-- .more -->
+                </div>
+            {/if}
+        </div>
 	</div>
 
 </div><!-- .page -->
