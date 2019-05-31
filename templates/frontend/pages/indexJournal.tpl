@@ -33,7 +33,7 @@
 
 	<div class="row">
 
-		<div class="col-12 col-md-8 mb-4">
+		<div class="col-12 col-md-4 mb-4">
 			{* Latest issue *}
 			{if $issue}
 				<div class="current_issue" style="margin-top: 0px;border-radius: 0.25rem;">
@@ -56,12 +56,15 @@
 					{$journalDescription}
 				</div>
 			{/if}
-
-            <h2 class="about_section_title">{translate key="manager.setup.editorialTeam"}</h2>
-			<div class="editorial_team mb-4">
-				{$currentContext->getLocalizedSetting('editorialTeam')}
-			</div>
 		</div>
+
+        <div class="col-12 col-md-4">
+            {* Editorial Team *}
+            <h2 class="about_section_title">{translate key="manager.setup.editorialTeam"}</h2>
+            <div class="editorial_team mb-4">
+                {$currentContext->getLocalizedSetting('editorialTeam')}
+            </div>
+        </div>
 	</div>
 
 </div><!-- .page -->
