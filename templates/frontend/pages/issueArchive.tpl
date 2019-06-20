@@ -36,7 +36,7 @@
 	{else}
         <div class="row">
             {foreach from=$issues item="issue"}
-            <div class="col-12 col-sm-4 mb-4">
+            <div class="col-12 col-md-4 mb-4">
                 {include file="frontend/objects/issue_summary.tpl"}
             </div>
             {/foreach}
