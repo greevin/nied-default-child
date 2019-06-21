@@ -31,9 +31,9 @@
     {* Announcements Carousel *}
     {include file="frontend/components/carousel.tpl"}
 
-	<div class="row">
+	<div class="row page_index_row">
 
-		<div class="col-12 col-md-4 mb-4">
+		<div class="col-12 col-md-12 col-lg-4 mb-4">
 			{* Latest issue *}
 			{if $issue}
                 <h2 class="about_section_title">{translate key="journal.currentIssue"}</h2>
@@ -49,7 +49,7 @@
 			{/if}
 		</div>
 
-		<div class="col-12 col-md-4">
+		<div class="col-12 col-md-12 col-lg-4 mb-4">
 			{* Additional Homepage Content *}
 			{if $journalDescription}
 				<div class="additional_content mb-4">
@@ -58,7 +58,7 @@
 			{/if}
 		</div>
 
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-12 col-lg-4 mb-4">
             {* Editorial Team *}
             <h2 class="about_section_title">{translate key="manager.setup.editorialTeam"}</h2>
             <div class="editorial_team mb-4">
