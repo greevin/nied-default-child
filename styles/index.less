@@ -39,8 +39,16 @@ body {
     padding: 30px;
 }
 
-.obj_article_details h1 {
+.page_article .page_title {
   line-height: 35px;
+}
+
+.page_article .main_entry {
+  word-break: break-word;
+}
+
+.obj_article_details .row {
+  margin-top: 0;
 }
 
 .pkp_page_index .cmp_announcements > .obj_announcement_summary {
@@ -169,4 +177,10 @@ body {
       margin-left: -60px;
       margin-right: -60px;
     }
+}
+
+@media (min-width: 1200px) {
+  .obj_article_details .main_entry {
+    width: 780px;
+  }
 }

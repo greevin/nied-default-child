@@ -26,7 +26,7 @@
 	{* Display an issue with the Table of Contents *}
 	{else}
 		{include file="frontend/components/breadcrumbs_issue.tpl" currentTitle=$issueIdentification}
-        <h1>{$issueIdentification}</h1>
+        <h1 class="archive_section_title">{$issueIdentification}</h1>
 		{include file="frontend/objects/issue_toc.tpl"}
 	{/if}
 </div>
