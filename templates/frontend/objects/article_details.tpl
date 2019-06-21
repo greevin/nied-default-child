@@ -65,6 +65,7 @@
  * @uses $ccLicenseBadge string An image and text with details about the license
  *}
 
+<p class="section-title-top">{$section->getLocalizedTitle()|escape}</p>
 <h1 class="page_title archive_section_title">
     {$article->getLocalizedTitle()|escape}
 </h1>
