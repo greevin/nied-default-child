@@ -12,7 +12,7 @@
 
 <div class="row">
     {foreach from=$announcements item=announcement}
-    <div class="col-sm-6">
+    <div class="col-12 col-md-6">
         <div class="card mb-3">
             <div class="card-body" style="padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
                 <div>
