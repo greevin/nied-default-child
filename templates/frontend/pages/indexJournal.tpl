@@ -28,6 +28,15 @@
 		</div>
 	{/if}
 
+{*    {if empty($isFullWidth)}*}
+{*        {call_hook|assign:"sidebarCode" name="Templates::Common::Sidebar"}*}
+{*        {if $sidebarCode}*}
+{*            <div class="pkp_structure_sidebar left" role="complementary" aria-label="{translate|escape key="common.navigation.sidebar"}">*}
+{*                {$sidebarCode}*}
+{*            </div><!-- pkp_sidebar.left -->*}
+{*        {/if}*}
+{*    {/if}*}
+
     {* Announcements Carousel *}
     {include file="frontend/components/carousel.tpl"}
 
