@@ -26,7 +26,7 @@
 <div class="page page_issue_archive">
 	{include file="frontend/components/breadcrumbs.tpl" currentTitle=$pageTitle}
 
-    <h1 class="archive_section_title">{$pageTitle}</h1>
+    <h1 class="archive_section_title mb-4">{$pageTitle}</h1>
 
 	{* No issues have been published *}
 	{if empty($issues)}

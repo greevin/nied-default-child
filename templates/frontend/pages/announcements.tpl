@@ -15,7 +15,7 @@
 	{include file="frontend/components/breadcrumbs.tpl" currentTitleKey="announcement.announcements"}
 	{include file="frontend/components/editLink.tpl" page="management" op="settings" path="website" anchor="announcements" sectionTitleKey="announcement.announcements"}
 
-    <h1>{translate key="manager.announcements"}</h1>
+    <h1 class="archive_section_title mb-4">{translate key="manager.announcements"}</h1>
 	{$announcementsIntroduction}
 
 	{include file="frontend/components/announcements.tpl"}
