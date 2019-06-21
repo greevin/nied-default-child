@@ -36,8 +36,8 @@
 		<div class="col-12 col-md-4 mb-4">
 			{* Latest issue *}
 			{if $issue}
-				<div class="current_issue" style="margin-top: 0px;border-radius: 0.25rem;">
-					<h2>{translate key="journal.currentIssue"}</h2>
+                <h2 class="about_section_title">{translate key="journal.currentIssue"}</h2>
+				<div class="current_issue" style="margin-top: 0px;">
 					<div class="current_issue_title">
 						{$issue->getIssueIdentification()|strip_unsafe_html}
 					</div>
@@ -52,7 +52,7 @@
 		<div class="col-12 col-md-4">
 			{* Additional Homepage Content *}
 			{if $journalDescription}
-				<div class="additional_content mb-4" style="border-radius: 0.25rem;">
+				<div class="additional_content mb-4">
 					{$journalDescription}
 				</div>
 			{/if}

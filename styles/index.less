@@ -86,7 +86,7 @@ body {
 // Pagina Inicial - Conteudo Adicional
 .pkp_page_index .additional_content {
     .background-box-shadow();
-    border-top: 10px solid #007ab2;
+    border-top: 5px solid #2286c3;
     padding-bottom: 30px;
     margin-left: 0;
     margin-right: 0;
@@ -119,7 +119,6 @@ body {
 
 // Pagina Inicial - Secao Edicao Atual
 .page_index_journal .current_issue {
-    border-top: 10px solid #501384;
     margin-left: 0;
     margin-right: 0;
     .background-box-shadow();
@@ -128,6 +127,10 @@ body {
 .obj_issue_toc .sections .section, .more article.obj_announcement_summary {
     border-top: 1px solid @grey-color;
     padding-bottom: 0px;
+}
+
+.obj_issue_toc .sections:not(:first-child) {
+  margin-top: 0;
 }
 
 .page_index_journal .current_issue .obj_issue_toc .sections .section:last-child {
